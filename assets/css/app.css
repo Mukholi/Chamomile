@@ -1,11 +1,12 @@
 body {
   font-family: Poppins;
   background-color: #ECECEC;
+  padding-bottom: 10cm;
 }
 
 .app-body {
   position: relative;
-  padding: 0px 2.5%;
+  padding: 0px 3.5%;
 }
 
 .app-title {
@@ -28,7 +29,7 @@ body {
   margin: unset;
   padding: unset;
   font-weight: 700;
-  font-size: 1.65em;
+  font-size: 1.9em;
 }
 .app-title .app-title-right {
   position: relative;
@@ -135,4 +136,126 @@ body {
   font-size: 0.6em;
   font-weight: 700;
   opacity: 0.5;
+}
+
+.app-label {
+  position: relative;
+  width: 100%;
+  margin: 30px 0px;
+}
+.app-label .app-label-text {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  opacity: 0.3;
+}
+
+.app-product-offer {
+  position: relative;
+  width: 100%;
+  height: 10cm;
+  background: gray;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.app-product-offer .app-product-offer-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-top {
+  position: absolute;
+  width: 85%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-top .app-product-offer-label {
+  position: absolute;
+  right: 0;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 15px 15px;
+  border-radius: 90px;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-top .app-product-offer-label .app-product-offer-label-text {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  margin: unset;
+  padding: unset;
+  font-size: 0.7em;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-bottom {
+  position: absolute;
+  width: 85%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-bottom .app-product-offer-title {
+  font-size: 1.4em;
+  line-height: 1.1em;
+  font-weight: 900;
+  color: white;
+  margin: unset;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-fg-container .app-product-offer-fg .app-product-offer-fg-bottom .app-product-offer-price {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-bg-container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.app-product-offer .app-product-offer-link .app-product-offer-bg-container .app-product-offer-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-bg-container .app-product-offer-bg .app-product-offer-bg-gradient {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, #FFFFFF 0% 0%, #4B4914 100% 100%);
+  mix-blend-mode: multiply;
+}
+.app-product-offer .app-product-offer-link .app-product-offer-bg-container .app-product-offer-bg .app-product-offer-bg-image {
+  position: absolute;
+  z-index: 1;
+  width: 170%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=app.css.map */
