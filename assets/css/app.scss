@@ -5,7 +5,10 @@ body{
 }
 .app-body{
     position: relative;
-    padding: 0px 3.5%;
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 15px;
+    //padding: 0px 3.5%;
 }
 
 .app-title{
@@ -50,9 +53,10 @@ body{
     position: relative;
     width: 100%;
     height: 3cm;
-    background: white;
     border-radius: 15px;
     margin-bottom: 15px;
+    //border: 1px solid green;
+    padding-bottom: 0.25cm;
     .app-product-card-link{
         position: relative;
         display: flex;
@@ -62,10 +66,16 @@ body{
         padding: 10px 10px;
         text-decoration: none;
         color: black;
+        overflow: hidden;
+        //border: 1px solid red;
+        background: white;
+        margin-bottom: 300px;
+        // flex-direction: column;
         .app-product-card-left{
             position: relative;
-            width: 4cm;
-            height: 100%;
+            width: 3.5cm;
+            height: 3;
+            //border: 1px solid red;
             .app-product-card-left-image-cont{
                 position: relative;
                 width: 2.5cm;
@@ -87,12 +97,11 @@ body{
         }
         .app-product-card-right{
             position: relative;
-            display: flex;
-            align-items: center;
-            width: 70%;
+            display: top;
+            align-items: sta;
+            width: 100%;
             height: 85%;
             //background: pink;
-            margin-left: -45px;
             .app-product-card-details{
                 position: relative;
                 display: flex;
@@ -115,6 +124,10 @@ body{
                     font-weight: 500;
                     color: green;
                 }
+                .app-product-card-details-info{
+                    font-size: 0.8em;
+                    margin-top: 0.5cm;
+                }
                 .app-product-card-details-options{
                     padding: unset;
                     margin: unset;
@@ -136,6 +149,80 @@ body{
                     }
 
                 }
+
+                .app-product-card-from{
+                    position: relative;
+                    width: 100%;
+                    //background: pink;
+                    .app-product-card-from-input{
+                        position: relative;
+                        display: flex;
+                        width: 100%;
+                        margin-top: 1cm;
+                        .app-product-card-from-input-button{
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            width: 20%;
+                            height: 1.5cm;
+                            // background: yellow;
+                            .app-product-card-from-input-button-label{
+                                margin: unset;
+                                padding: unset;
+                                width: 100%;
+                                text-align: center;
+                                cursor: default;
+                                font-size: 1.5em;
+                            }
+                        }
+                        .app-product-card-from-input-display{
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            width: 60%;
+                            .app-product-card-from-input-display-number{
+                                margin: unset;
+                                padding: unset;
+                                margin-left: auto;
+                                font-weight: 800;
+                            }
+                            .app-product-card-from-input-button{
+
+                            }
+                            .app-product-card-from-input-display-unit{
+                                margin: unset;
+                                padding: unset;
+                                margin-left: 2px;
+                                margin-right: auto;
+                                font-size: 0.5em;
+                            }
+                        }
+                    }
+                    .app-product-card-from-buttons{
+                        position: relative;
+                        width: 100%;
+                        .app-product-card-from-button{
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            width: 95%;
+                            height: 1.25cm;
+                            border: 2px solid black;
+                            border-radius: 10px;
+                            padding: 0px 10px;
+                            margin-bottom: 05px;
+                            .app-product-card-from-button-label{
+                                font-size: 0.8em;
+                                font-weight: 900;
+                                margin: unset;
+                                padding: unset;
+                            }
+                        }
+                    }
+
+                }
+
+
             }
         }
     }
