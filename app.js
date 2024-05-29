@@ -56,22 +56,23 @@ for (let productIndex = 0; productIndex < productItem.length; productIndex++){
         var productItemAnimationOpen = gsap.timeline()
         productItemAnimationOpen.pause()
 
-        var currenProductItemCard = document.getElementsByClassName("app-product-card")[productIndex]
-        var currenProductItemLink = document.getElementsByClassName("app-product-card-link")[productIndex]
-        var currenProductItemCardTop = document.getElementsByClassName("app-product-card-left")[productIndex]
-        var currenProductItemCardTopImageContainer = document.getElementsByClassName("app-product-card-left-image-cont")[productIndex]
-        var currenProductItemCardBottom = document.getElementsByClassName("app-product-card-right")[productIndex]
-        var currenProductItemCardTitle = document.getElementsByClassName("app-product-card-details-title")[productIndex]
+        var currentProductItemCard = document.getElementsByClassName("app-product-card")[productIndex]
+        var currentProductItemLink = document.getElementsByClassName("app-product-card-link")[productIndex]
+        var currentProductItemCardTop = document.getElementsByClassName("app-product-card-left")[productIndex]
+        var currentProductItemCardTopImageContainer = document.getElementsByClassName("app-product-card-left-image-cont")[productIndex]
+        var currentProductItemCardBottom = document.getElementsByClassName("app-product-card-right")[productIndex]
+        var currentProductItemCardTitle = document.getElementsByClassName("app-product-card-details-title")[productIndex]
 
 
-        productItemAnimationOpen.set(currenProductItemLink,{flexDirection:"column"})
-        productItemAnimationOpen.set(currenProductItemCardBottom,{alignItems:"flex-start", paddingTop:"0.5cm"})
+        productItemAnimationOpen.set(currentProductItemLink,{flexDirection:"column"})
+        // productItemAnimationOpen.set(currentProductItemCardBottom,{alignItems:"flex-start"})
 
-        productItemAnimationOpen.to(currenProductItemCard,{height:"15cm", duration:1})
-        productItemAnimationOpen.to(currenProductItemCardTop,{width:"100%",height:"12cm", duration:1},"=-1")
-        productItemAnimationOpen.to(currenProductItemCardTopImageContainer,{width:"100%",height:"100%", duration:1},"=-1")
+        productItemAnimationOpen.to(currentProductItemCard,{height:"15cm", duration:1})
+        productItemAnimationOpen.to(currentProductItemLink,{height:"15cm", duration:1},"=-1")
+        productItemAnimationOpen.to(currentProductItemCardTop,{width:"100%",height:"10cm", duration:1},"=-0.5")
+        productItemAnimationOpen.to(currentProductItemCardTopImageContainer,{width:"100%",height:"10cm", duration:1},"=-1")
         
-        productItemAnimationOpen.to(currenProductItemCardTitle,{fontSize:"1.25em", fontWeight:"800"},"=-1")
+        productItemAnimationOpen.to(currentProductItemCardTitle,{fontSize:"1.25em", fontWeight:"800"},"=-1")
 
 
 

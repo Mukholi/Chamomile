@@ -63,7 +63,7 @@ body{
     padding-bottom: 0.25cm;
     margin: 0 auto;
     margin-bottom: 10px;
-    //border: 1px solid green;
+    border: 1px solid green;
     .app-product-card-link{
         position: relative;
         display: flex;
@@ -74,17 +74,17 @@ body{
         text-decoration: none;
         color: black;
         overflow: hidden;
-        //border: 1px solid red;
+        border: 1px solid cyan;
         background: white;
-        margin-bottom: 300px;
+        // margin-bottom: 300px;
         // flex-direction: column;
         .app-product-card-left{
             position: relative;
             width: 3.5cm;
-            height: 3;
+            height: 2.5cm;
             margin-left: 10px;
             margin-right: 10px;
-            //border: 1px solid red;
+            border: 1px solid red;
             .app-product-card-left-image-cont{
                 position: relative;
                 width: 2.5cm;
@@ -111,8 +111,8 @@ body{
             height: 85%;
             align-items: center;
             //background: pink;
-            //background: yellow;
-            //border: 1px solid red;
+            background: yellow;
+            border: 1px solid purple;
             .app-product-card-details{
                 position: relative;
                 display: flex;
