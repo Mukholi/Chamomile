@@ -7,6 +7,7 @@ body{
     margin-right: unset;
     padding-left: unset;
     padding-right: unset;
+    overflow-y: hidden;
 }
 .app-body{
     position: relative;
@@ -63,7 +64,7 @@ body{
     padding-bottom: 0.25cm;
     margin: 0 auto;
     margin-bottom: 10px;
-    border: 1px solid green;
+    // border: 1px solid green;
     .app-product-card-link{
         position: relative;
         display: flex;
@@ -74,7 +75,7 @@ body{
         text-decoration: none;
         color: black;
         overflow: hidden;
-        border: 1px solid cyan;
+        // border: 1px solid cyan;
         background: white;
         // margin-bottom: 300px;
         // flex-direction: column;
@@ -84,7 +85,7 @@ body{
             height: 2.5cm;
             margin-left: 10px;
             margin-right: 10px;
-            border: 1px solid red;
+            // border: 1px solid red;
             .app-product-card-left-image-cont{
                 position: relative;
                 width: 2.5cm;
@@ -112,7 +113,7 @@ body{
             align-items: center;
             //background: pink;
             //background: yellow;
-            border: 1px solid purple;
+            // border: 1px solid purple;
             .app-product-card-details{
                 position: relative;
                 display: flex;
@@ -368,40 +369,31 @@ body{
 
 .app-page-product{
     position: fixed;
-    display: none;
     z-index: 10;
     bottom: 0px;
     left: 0px;
-    width: 100%;
-    height: 0vh;
-    background: red;
+    width: 99%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(2px);
+    // border: 2px solid red;
+    overflow-y: scroll;
+    // background: red;
     .app-page-product-container{
-        position: relative;
+        position: absolute;
         width: 100%;
-        height: 10cm;
+        height: 25cm;
+        margin-top: 25%;
         background: white;
-        .app-page-product-carousel-cont{
+        // display: none;
+        .app-page-product-padding{
             position: relative;
             width: 100%;
-            height: 50vh;
-            background: gray;
-        }
-        .app-page-product-form-cont{
-            position: relative;
-            width: 100%;
-            height: 50vh;
+            height: 2cm;
             background: white;
-            .app-page-product-form-padding{
-                position: absolute;
-                z-index: 11;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 100%;
-                height: 2cm;
-                background: white;
-                border-radius: 50px;
-                top: -1cm;
-            }
+            border-radius: 100cm;
+            margin-top: -1cm;
+            // display: none;
         }
     }
 }
