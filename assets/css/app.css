@@ -370,10 +370,87 @@ body {
   position: relative;
   width: 100%;
   height: 10cm;
-  background: pink;
+  background: gray;
   margin-top: -1cm;
 }
 .app-page-product .app-page-product-container .padding-x {
   overflow: hidden;
   border-radius: 50px 50px 0 0;
+}
+.app-page-product .app-page-product-container .app-page-product-form {
+  position: relative;
+  width: 80%;
+  height: 5cm;
+  margin: 0 auto;
+}
+.app-page-product .app-page-product-container .app-page-product-form .shimmer-container {
+  position: relative;
+  width: 100%;
+}
+.app-page-product .app-page-product-container .app-page-product-form .shimmer-container .shimmer-element {
+  position: absolute;
+  border-radius: 100px;
+  width: 100%;
+  height: 0.9cm;
+  background-size: 200% 100%;
+  animation: shimmer 16s infinite;
+  overflow: hidden;
+}
+.app-page-product .app-page-product-container .app-page-product-form .shimmer-container .shimmer-element .shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  height: 100%;
+  width: 200%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%, rgba(255, 255, 255, 0) 95%);
+  animation: shimmer-animation 1.5s infinite linear;
+}
+@keyframes shimmer-animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes shimmer {
+  0% {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  }
+  25% {
+    background: linear-gradient(90deg, #e0e0e0 35%, #f0f0f0 50%, #e0e0e0 65%);
+  }
+  50% {
+    background: linear-gradient(90deg, #f0f0f0 45%, #e0e0e0 50%, #f0f0f0 55%);
+  }
+  75% {
+    background: linear-gradient(90deg, #e0e0e0 35%, #f0f0f0 50%, #e0e0e0 65%);
+  }
+  100% {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  }
+}
+.app-page-product .app-page-product-container .app-page-product-form .shimmer-container .shimmer-element:nth-child(2) {
+  margin-top: 1.1cm;
+  width: 55%;
+}
+.app-page-product .app-page-product-container .app-page-product-form .app-page-product-form-title {
+  font-size: 1.65em;
+  font-weight: 700;
+  margin-bottom: 10px;
+  opacity: 0;
+}
+.app-page-product .app-page-product-container .app-page-product-form .app-page-product-form-title {
+  font-size: 1.65em;
+  font-weight: 700;
+}
+.app-page-product .app-page-product-container .app-page-product-form .app-page-product-form-price {
+  font-size: 1.25em;
+  margin-top: 5px;
+}
+.app-page-product .app-page-product-container .app-page-product-form .app-page-product-form-price-currency {
+  font-size: 0.6em;
+  margin-right: 5px;
+  font-weight: 500;
 }/*# sourceMappingURL=app.css.map */
