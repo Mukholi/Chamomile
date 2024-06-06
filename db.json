@@ -1,0 +1,12 @@
+{
+    "productID":"00",
+    "productName":"Product Name",
+    "productCategory":"Herbs",
+    "productStatus":"Instock",
+    "productPrice":"1500",
+    "productOnSale":"false",
+    "productSalePrice":"1500",
+    "productImage":"NULL",
+    "productImages":{"/","/","/"},
+    "productThumbnailLink":"NULL"
+}
