@@ -71,3 +71,39 @@ navigationItems[1].addEventListener("click",()=>{
     currentPage = 2
     
 })
+
+
+//LOAD PRODUCTS
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('./db.json')
+      .then(response => response.json())
+      .then(data => {
+        const products = data.products;
+        const inStockContainer = document.getElementById('in-stock-container');
+        const outOfStockContainer = document.getElementById('out-of-stock-container');
+  
+        products.forEach(product => {
+          const productDiv = document.createElement('div');
+          productDiv.className = 'product';
+          productDiv.innerHTML = `
+            <h3>${product.productName}</h3>
+            <p>Category: ${product.productCategory}</p>
+            <p>Price: $${product.productPrice}</p>
+          `;
+  
+          if (product.productStatus === "Instock") {
+            productDiv.classList.add('in-stock');
+            inStockContainer.appendChild(productDiv);
+          } else {
+            productDiv.classList.add('out-of-stock');
+            outOfStockContainer.appendChild(productDiv);
+          }
+        });
+      })
+      .catch(error => console.error('Error fetching the products:', error));
+  });
+  
+  //Shimmer Animation End On Element Visible
+  for(var shimmerContainerIndex = 0; shimmerContainerIndex < shimmerContainer.length; shimmerContainerIndex++){
+    console.log(shimmerContainer[shimmerContainerIndex])
+  }
