@@ -629,7 +629,7 @@ body{
                         height: 100%;
                         width: 200%;
                         background: linear-gradient(90deg, #ffffff00 10%, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%, #ffffff00 95%);
-                        animation: shimmer-animation .75s infinite linear;
+                        animation: shimmer-animation .5s infinite linear;
                     }
                     @keyframes shimmer-animation {
                         0% {
@@ -692,6 +692,8 @@ body{
                         display: block;
                         margin: auto;
                         text-align: center;
+                        user-select: none;
+                        pointer-events: none;
                     }
                 }
                 .app-page-product-form-counter-input-label{

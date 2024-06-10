@@ -19,6 +19,7 @@ productPageAnimationIn.set(shimmerElement,{display:'none'})
 
 
 //Product Page Animation
+let _productPrice = 1
 let _productMinimumQuantity = 1
 let _productMaximumQuantity = 0
 let _productQuantityDelta = 1
@@ -34,7 +35,7 @@ for(let productItemsIndex = 0; productItemsIndex < productItems.length; productI
         let _productName = productItems[productItemsIndex].querySelector(".app-product-card-details-title").textContent
         let _productImage = productItems[productItemsIndex].querySelector(".app-product-card-left-image").getAttribute("src")
         let _productDescription = productItems[productItemsIndex].querySelector(".app-product-card-details-info").textContent
-        let _productPrice = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productPrice")
+        _productPrice = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productPrice")
         _productMinimumQuantity = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productMinimumQuantity")
         _productMaximumQuantity = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productMaximumQuantity")
         _productQuantityDelta = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productQuantityDelta")
@@ -60,7 +61,9 @@ for(let productItemsIndex = 0; productItemsIndex < productItems.length; productI
 let productPageInputBtn = document.getElementsByClassName("app-page-product-form-counter-btn")
 //Adding
 productPageInputBtn[0].addEventListener("click",()=>{
-    if(_productMaximumQuantity == 0){document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent = parseFloat(document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)+parseFloat(_productQuantityDelta)}
+    if(_productMaximumQuantity == 0){
+        document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent = parseFloat(document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)+parseFloat(_productQuantityDelta)
+    }
     else{
         if(parseFloat(document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)+parseFloat(_productQuantityDelta) <= _productMaximumQuantity){
             document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent = parseFloat(document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)+parseFloat(_productQuantityDelta)
@@ -73,6 +76,9 @@ productPageInputBtn[0].addEventListener("click",()=>{
     else{
         document.getElementsByClassName("app-page-product-form-counter-input-label-unit")[0].textContent = _productUnitPrural
     }
+
+    document.getElementsByClassName("app-page-product-form-price-figure")[0].textContent = parseFloat(_productPrice) * parseFloat( document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)
+
 })
 
 //Subtracting
@@ -87,6 +93,8 @@ productPageInputBtn[1].addEventListener("click",()=>{
     else{
         document.getElementsByClassName("app-page-product-form-counter-input-label-unit")[0].textContent = _productUnitPrural
     }
+
+    document.getElementsByClassName("app-page-product-form-price-figure")[0].textContent = parseFloat(_productPrice) * parseFloat( document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)
     
 })
 

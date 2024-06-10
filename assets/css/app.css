@@ -594,7 +594,7 @@ body {
   height: 100%;
   width: 200%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%, rgba(255, 255, 255, 0) 95%);
-  animation: shimmer-animation 0.75s infinite linear;
+  animation: shimmer-animation 0.5s infinite linear;
 }
 @keyframes shimmer-animation {
   0% {
@@ -653,6 +653,10 @@ body {
   display: block;
   margin: auto;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 .app-page-product .app-page-product-container .app-page-product-form .app-page-product-form-counter .app-page-product-form-counter-input-label {
   position: relative;
