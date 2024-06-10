@@ -18,6 +18,39 @@ productPageAnimationIn.to(shimmerChildren,{opacity:1, duration:0.25})
 productPageAnimationIn.set(shimmerElement,{display:'none'})
 
 
+//Load JSON Data
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('db.json')
+        .then(response => response.json())
+        .then(data => displayProducts(data))
+        .catch(error => console.error('Error fetching the JSON:', error));
+});
+
+function displayProducts(products) {
+    gsap.to(".app-splash-screen",{opacity:0, duration:1})
+    gsap.set(".app-splash-screen",{display:"none", delay:1})
+    // const productsContainer = document.getElementById('products');
+
+    // products.forEach(product => {
+    //     const productDiv = document.createElement('div');
+    //     productDiv.classList.add('product');
+
+    //     productDiv.innerHTML = `
+    //         <h2>${product.productName} ${product.productEmoji}</h2>
+    //         <p>${product.productDescription}</p>
+    //         <p><strong>Price:</strong> $${product.productPrice.toFixed(2)}</p>
+    //         <p><strong>Status:</strong> ${product.productStatus}</p>
+    //         <p><strong>Category:</strong> ${product.productCategory}</p>
+    //         <p><strong>Available Quantity:</strong> ${product.productMinimumQuantity}-${product.productMaximumQuantity} ${product.productUnitPlural}</p>
+    //         <img src="${product.productImage}" alt="${product.productName}">
+    //     `;
+
+    //     productsContainer.appendChild(productDiv);
+    // });
+}
+
+
+
 //Product Page Animation
 let _productPrice = 1
 let _productMinimumQuantity = 1
