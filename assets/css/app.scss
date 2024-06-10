@@ -560,8 +560,8 @@ body{
             border-radius: 1000px;
             background: rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
-            top: .25cm;
-            left: .25cm;
+            top: .5cm;
+            left: .5cm;
             cursor: pointer;
             p{
                 margin: auto;
@@ -654,6 +654,18 @@ body{
                     width: 60%;
                 }
             }
+            .app-page-product-form-status{
+                position: absolute;
+                background: red;
+                top: -1cm;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                padding: 2px 10px;
+                font-size: 0.7em;
+                color: white;
+                border-radius: 4px;
+            }
+
             .app-page-product-form-title{
                 font-size: 1.65em;
                 font-weight: 700;

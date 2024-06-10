@@ -34,6 +34,7 @@ for(let productItemsIndex = 0; productItemsIndex < productItems.length; productI
         let _productEmoji = productItems[productItemsIndex].getAttribute("productEmoji")
         let _productName = productItems[productItemsIndex].querySelector(".app-product-card-details-title").textContent
         let _productImage = productItems[productItemsIndex].querySelector(".app-product-card-left-image").getAttribute("src")
+        let _productStatus = productItems[productItemsIndex].getAttribute("productStatus")
         let _productDescription = productItems[productItemsIndex].querySelector(".app-product-card-details-info").textContent
         _productPrice = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productPrice")
         _productMinimumQuantity = productItems[productItemsIndex].querySelector(".app-product-card-details-price").getAttribute("productMinimumQuantity")
@@ -46,6 +47,7 @@ for(let productItemsIndex = 0; productItemsIndex < productItems.length; productI
         document.getElementsByClassName("app-page-product-form-title")[0].textContent = _productName
         document.getElementsByClassName("app-page-product-carousel-img")[0].setAttribute("src", _productImage)
         document.getElementsByClassName("app-page-product-form-id")[0].textContent = "(" + _productEmoji + " - #" + _productID + ")"
+        document.getElementsByClassName("app-page-product-form-status")[0].textContent = _productStatus
         document.getElementsByClassName("app-page-product-form-price-figure")[0].textContent = _productPrice
         if(_productMinimumQuantity <= 1) {document.getElementsByClassName("app-page-product-form-counter-input-label-unit")[0].textContent = _productUnit}
         else{document.getElementsByClassName("app-page-product-form-counter-input-label-unit")[0].textContent = _productUnitPrural}
@@ -61,7 +63,7 @@ for(let productItemsIndex = 0; productItemsIndex < productItems.length; productI
 let productPageInputBtn = document.getElementsByClassName("app-page-product-form-counter-btn")
 //Adding
 productPageInputBtn[0].addEventListener("click",()=>{
-    if(_productMaximumQuantity == 0){
+    if(_productMaximumQuantity <= 0){
         document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent = parseFloat(document.getElementsByClassName("app-page-product-form-counter-input-label-number")[0].textContent)+parseFloat(_productQuantityDelta)
     }
     else{
