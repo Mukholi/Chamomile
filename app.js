@@ -26,9 +26,20 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching the JSON:', error));
 });
 
+let shimmerAnimationHomePage = gsap.timeline()
+shimmerAnimationHomePage.pause()
+let homePage = document.getElementsByClassName("app-page-home")[0]
+let homePageShimmerElements = homePage.querySelectorAll(".shimmer-element")
+let homePageShimmerChildren = homePage.querySelectorAll(".shimmer-child")
+
+shimmerAnimationHomePage.set(homePageShimmerElements,{opacity:0})
+shimmerAnimationHomePage.set(homePageShimmerElements,{display:"none"})
+shimmerAnimationHomePage.set(homePageShimmerChildren,{opacity:1},"-=0.75")
+
 function displayProducts(products) {
     gsap.to(".app-splash-screen",{opacity:0, duration:1})
     gsap.set(".app-splash-screen",{display:"none", delay:1})
+    setTimeout(()=>{shimmerAnimationHomePage.restart()},1000)
     // const productsContainer = document.getElementById('products');
 
     // products.forEach(product => {
