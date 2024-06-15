@@ -22,7 +22,9 @@ productPageAnimationIn.set(shimmerElement,{display:'none'})
 document.addEventListener('DOMContentLoaded', function() {
     fetch('db.json')
         .then(response => response.json())
-        .then(data => displayProducts(data))
+        .then(data => {
+            displayProducts(data.products)
+        })
         .catch(error => console.error('Error fetching the JSON:', error));
 });
 
@@ -40,26 +42,111 @@ function displayProducts(products) {
     gsap.to(".app-splash-screen",{opacity:0, duration:1})
     gsap.set(".app-splash-screen",{display:"none", delay:1})
     setTimeout(()=>{shimmerAnimationHomePage.restart()},1000)
-    // const productsContainer = document.getElementById('products');
 
-    // products.forEach(product => {
-    //     const productDiv = document.createElement('div');
-    //     productDiv.classList.add('product');
-
-    //     productDiv.innerHTML = `
-    //         <h2>${product.productName} ${product.productEmoji}</h2>
-    //         <p>${product.productDescription}</p>
-    //         <p><strong>Price:</strong> $${product.productPrice.toFixed(2)}</p>
-    //         <p><strong>Status:</strong> ${product.productStatus}</p>
-    //         <p><strong>Category:</strong> ${product.productCategory}</p>
-    //         <p><strong>Available Quantity:</strong> ${product.productMinimumQuantity}-${product.productMaximumQuantity} ${product.productUnitPlural}</p>
-    //         <img src="${product.productImage}" alt="${product.productName}">
-    //     `;
-
-    //     productsContainer.appendChild(productDiv);
-    // });
+    products.forEach(category => {
+        category.forEach(product => {
+            console.log(product.productName);
+        });
+    });
 }
 
+//Create Product Item
+let newProductCard = (__productID, __productEmoji)=>{
+
+
+
+
+    function createProductCard(data) {
+        // Create the main container
+        const productCard = document.createElement('div');
+        productCard.classList.add('app-product-card');
+      
+        // Create the product link
+        const productLink = document.createElement('div');
+        productLink.classList.add('app-product-card-link', 'product-item');
+        productLink.setAttribute('productID', data.productID);
+        productLink.setAttribute('productEmoji', data.productEmoji);
+        productLink.setAttribute('productUnit', data.productUnit);
+        productLink.setAttribute('productUnitPrural', data.productUnitPrural);
+        productLink.setAttribute('productStatus', data.productStatus);
+      
+        // Create left and right sections
+        const productLeft = document.createElement('div');
+        productLeft.classList.add('app-product-card-left');
+        const productRight = document.createElement('div');
+        productRight.classList.add('app-product-card-right');
+      
+        // Create left image container
+        const leftImageCont = document.createElement('div');
+        leftImageCont.classList.add('app-product-card-left-image-cont');
+      
+        // Create shimmer container and element for image loading effect
+        const shimmerContainer = document.createElement('div');
+        shimmerContainer.classList.add('shimmer-container');
+        const shimmerElement = document.createElement('div');
+        shimmerElement.classList.add('shimmer-element');
+        shimmerElement.innerHTML = '<div class="shimmer"></div>';
+        shimmerContainer.appendChild(shimmerElement);
+      
+        // Create image element
+        const productImage = document.createElement('img');
+        productImage.classList.add('app-product-card-left-image', 'shimmer-child');
+        productImage.setAttribute('src', data.imageUrl || './assets/image/product01.jpg'); // Set default image if imageUrl is not provided
+      
+        // Append image and shimmer to container
+        shimmerContainer.appendChild(productImage);
+        leftImageCont.appendChild(shimmerContainer);
+      
+        // Create details section
+        const productDetails = document.createElement('div');
+        productDetails.classList.add('app-product-card-details');
+      
+        // Create another shimmer container for title loading effect
+        const detailsShimmer = document.createElement('div');
+        detailsShimmer.classList.add('shimmer-container');
+        detailsShimmer.innerHTML = '<div class="shimmer-element"><div class="shimmer"></div></div><div class="shimmer-element"><div class="shimmer"></div></div>';
+      
+        // Create title element
+        const productTitle = document.createElement('p');
+        productTitle.classList.add('app-product-card-details-title', 'shimmer-child');
+        productTitle.textContent = data.productTitle;
+      
+        // Append title and shimmer to details container
+        detailsShimmer.appendChild(productTitle);
+        productDetails.appendChild(detailsShimmer);
+      
+        // Create another shimmer container for price loading effect
+        const priceShimmer = document.createElement('div');
+        priceShimmer.classList.add('shimmer-container');
+        priceShimmer.innerHTML = '<div class="shimmer-element"><div class="shimmer"></div></div>';
+      
+        // Create price element with product attributes
+        const productPrice = document.createElement('p');
+        productPrice.classList.add('app-product-card-details-price', 'shimmer-child');
+        productPrice.setAttribute('productMinimumQuantity', data.productMinimumQuantity);
+        productPrice.setAttribute('productMaximumQuantity', data.productMaximumQuantity);
+        productPrice.setAttribute('productQuantityDelta', data.productQuantityDelta);
+        productPrice.textContent = `UGX <span class="math-inline">\{data\.productPrice\} /</span>{data.productUnit}`;
+      
+        // Append price and shimmer to details container
+        priceShimmer.appendChild(productPrice);
+        productDetails.appendChild(priceShimmer);
+      
+        // Add product description
+        const productInfo = document.createElement('p');
+        productInfo.classList.add('app-product-card-details-info');
+        productInfo.textContent = data.productInfo;
+        productDetails.appendChild(productInfo);
+      
+        // Append details and left section to product link
+        productLink.appendChild(productLeft);
+        productLink.appendChild(productRight);
+        productLeft.appendChild(leftImageCont);
+        productRight.appendChild(detailsShimmer);
+        productRight.appendChild(detailsShimmer);
+        productCard.appendChild(productLink)
+        return(productCard)
+}
 
 
 //Product Page Animation

@@ -1,5 +1,4 @@
-{
-    "products":[
+let products =[
         [
             {
               "productIndex": 1,
@@ -292,11 +291,11 @@
             {
               "productIndex": 19,
               "productID": "#556B2F",
-              "productEmoji": "🌿",
+              "productEmoji": "💊",
               "productStatus": "Available",
               "productName": "Borage",
               "productDescription": "Borage leaves with a cucumber-like flavor.",
-              "productCategory": "Herbs",
+              "productCategory": "Pills",
               "productPrice": 2.60,
               "productImage": "borage.jpg",
               "productMinimumQuantity": 1,
@@ -308,11 +307,11 @@
             {
               "productIndex": 20,
               "productID": "#8FBC8F",
-              "productEmoji": "🌿",
+              "productEmoji": "💊",
               "productStatus": "Available",
               "productName": "Winter Savory",
               "productDescription": "Winter savory with a spicy, peppery flavor.",
-              "productCategory": "Herbs",
+              "productCategory": "Pills",
               "productPrice": 2.45,
               "productImage": "winter_savory.jpg",
               "productMinimumQuantity": 1,
@@ -324,4 +323,3 @@
           ]
           
     ]
-}

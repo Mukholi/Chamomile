@@ -846,4 +846,9 @@ body {
   padding: 0px 20px;
   font-size: 1em;
   outline: unset;
+}
+.app-page-inventory .app-page-inventory-area {
+  position: relative;
+  width: 100%;
+  min-height: 10cm;
 }/*# sourceMappingURL=app.css.map */
