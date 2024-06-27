@@ -1,10 +1,9 @@
 let products =[
-        [
             {
               "productIndex": 1,
               "productID": "#7CFC00",
               "productEmoji": "🌿",
-              "productStatus": "Available",
+              "productStatus": "Out of Stock",
               "productName": "Basil",
               "productDescription": "Fresh basil leaves with a sweet, peppery flavor.",
               "productCategory": "Herbs",
@@ -52,7 +51,7 @@ let products =[
               "productIndex": 4,
               "productID": "#32CD32",
               "productEmoji": "🍀",
-              "productStatus": "Available",
+              "productStatus": "",
               "productName": "Parsley",
               "productDescription": "Flat-leaf parsley with a bright, slightly bitter taste.",
               "productCategory": "Herbs",
@@ -68,7 +67,7 @@ let products =[
               "productIndex": 5,
               "productID": "#006400",
               "productEmoji": "🌿",
-              "productStatus": "Available",
+              "productStatus": "",
               "productName": "Thyme",
               "productDescription": "Thyme with a pungent, earthy flavor.",
               "productCategory": "Herbs",
@@ -308,7 +307,7 @@ let products =[
               "productIndex": 20,
               "productID": "#8FBC8F",
               "productEmoji": "💊",
-              "productStatus": "Available",
+              "productStatus": "Out of Stock",
               "productName": "Winter Savory",
               "productDescription": "Winter savory with a spicy, peppery flavor.",
               "productCategory": "Pills",
@@ -321,5 +320,3 @@ let products =[
               "productUnitPlural": "bunches"
             }
           ]
-          
-    ]
