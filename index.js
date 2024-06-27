@@ -38,7 +38,7 @@ shimmerAnimationHomePage.set(homePageShimmerChildren,{opacity:1},"-=0.75")
 function displayProducts(products) {
     gsap.to(".app-splash-screen",{opacity:0, duration:1})
     gsap.set(".app-splash-screen",{display:"none", delay:1})
-    setTimeout(()=>{shimmerAnimationHomePage.restart()},1000)
+    //setTimeout(()=>{shimmerAnimationHomePage.restart()},1000)
 }
 
 //Product Page Animation

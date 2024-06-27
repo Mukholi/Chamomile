@@ -16,20 +16,30 @@ function createProductCard(product) {
              productStatus="${product.productStatus}">
             <div class="app-product-card-left">
                 <div class="app-product-card-left-image-cont">
-                    <img class="app-product-card-left-image" src="./assets/image/product01.jpg" alt="${product.productName}">
+                        <div class="shimmer-container">
+                            <div class="shimmer-element"><div class="shimmer"></div></div>
+                            <img class="app-product-card-left-image shimmer-child" src="./assets/image/product01.jpg" alt="${product.productName}">
+                        </div>
                 </div>
             </div>
             <div class="app-product-card-right">
                 <div class="app-product-card-details">
                     ${statusHtml}
-                    <p class="app-product-card-details-title">${product.productName}</p>
-                    <p class="app-product-card-details-price" 
-                       productMinimumQuantity="${product.productMinimumQuantity}" 
-                       productMaximumQuantity="${product.productMaximumQuantity}" 
-                       productQuantityDelta="${product.productQuantityDelta}" 
-                       productPrice="${product.productPrice}">
-                       UGX ${product.productPrice} /${product.productUnit}
-                    </p>
+                    <div class="shimmer-container">
+                        <div class="shimmer-element"><div class="shimmer"></div></div>
+                        <div class="shimmer-element"><div class="shimmer"></div></div>
+                        <p class="app-product-card-details-title shimmer-child">${product.productName}</p>
+                    </div>
+                    <div class="shimmer-container">
+                        <div class="shimmer-element"><div class="shimmer"></div></div>
+                        <p class="app-product-card-details-price shimmer-child" 
+                        productMinimumQuantity="${product.productMinimumQuantity}" 
+                        productMaximumQuantity="${product.productMaximumQuantity}" 
+                        productQuantityDelta="${product.productQuantityDelta}" 
+                        productPrice="${product.productPrice}">
+                        UGX ${product.productPrice} /${product.productUnit}
+                        </p>
+                    </div>
                     <p class="app-product-card-details-info">${product.productDescription}</p>
                 </div>
             </div>
