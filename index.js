@@ -146,6 +146,7 @@ navigationItems[0].addEventListener("click",()=>{
             break
         }
         case 2:{
+            alert("Inventory")
             page1Animation.reverse()
             page2Animation.reverse()
             break
