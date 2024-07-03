@@ -847,6 +847,21 @@ body {
   font-size: 1em;
   outline: unset;
 }
+.app-page-inventory .app-inventory-search-cont .app-inventory-search-form .app-inventory-search-form-input-clear {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 1.5cm;
+  height: 1.5cm;
+  right: 1px;
+}
+.app-page-inventory .app-inventory-search-cont .app-inventory-search-form .app-inventory-search-form-input-clear p {
+  text-align: center;
+  width: 100%;
+  transform: rotate(45deg);
+  font-size: 1.5em;
+  cursor: default;
+}
 .app-page-inventory .app-page-inventory-area {
   position: relative;
   width: 100%;

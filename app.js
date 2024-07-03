@@ -122,3 +122,9 @@ document.getElementById('app-page-inventory-area').addEventListener('click', fun
        pushProductPage(productItem)
     }
 });
+
+let closeBtn = document.getElementsByClassName("app-inventory-search-form-input-clear")[0]
+
+closeBtn.addEventListener("click",()=>{
+    document.getElementsByClassName("app-inventory-search-form-input")[0].value = ""
+})

@@ -142,6 +142,9 @@ page2Animation.to("#page2",{y:"0vh"})
 
 navigationItems[0].addEventListener("click",()=>{
     switch(currentPage){
+        case 0:{
+            break
+        }
         case 1:{
             break
         }
@@ -158,6 +161,9 @@ navigationItems[0].addEventListener("click",()=>{
 })
 navigationItems[1].addEventListener("click",()=>{
     switch(currentPage){
+        case 0:{
+            break
+        }
         case 1:{
             page1Animation.restart()
             page2Animation.restart()
